@@ -3,7 +3,7 @@ class Testfile < ActiveRecord::Base
   belongs_to :user
 
   validates :filename, :content_type, :file_contents, :confidence_rank, :presence => true
-  
+
 
   attr_accessible :id, :filename, :content_type, :file_contents, :confidence_rank
 end
