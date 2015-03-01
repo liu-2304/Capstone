@@ -1,0 +1,51 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Properties</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Density</th>
+      <th>Elastic modulus</th>
+      <th>Shear modulus</th>
+      <th>Poissons strength</th>
+      <th>Yield strength</th>
+      <th>Ultimate tensile strength</th>
+      <th>Ultimate total elongation</th>
+      <th>Hardness value</th>
+      <th>Melting point</th>
+      <th>Thermal conductivity</th>
+      <th>Specific heat</th>
+      <th>Electrical resistivity</th>
+      <th>Chemical composition</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @properties.each do |property| %>
+      <tr>
+        <td><%= property.density %></td>
+        <td><%= property.elastic_modulus %></td>
+        <td><%= property.shear_modulus %></td>
+        <td><%= property.poissons_strength %></td>
+        <td><%= property.yield_strength %></td>
+        <td><%= property.ultimate_tensile_strength %></td>
+        <td><%= property.ultimate_total_elongation %></td>
+        <td><%= property.hardness_value %></td>
+        <td><%= property.melting_point %></td>
+        <td><%= property.thermal_conductivity %></td>
+        <td><%= property.specific_heat %></td>
+        <td><%= property.electrical_resistivity %></td>
+        <td><%= property.chemical_composition %></td>
+        <td><%= link_to 'Show', property %></td>
+        <td><%= link_to 'Edit', edit_property_path(property) %></td>
+        <td><%= link_to 'Destroy', property, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Property', new_property_path %>

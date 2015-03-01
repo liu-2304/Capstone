@@ -1,0 +1,69 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Density:</strong>
+  <%= @property.density %>
+</p>
+
+<p>
+  <strong>Elastic modulus:</strong>
+  <%= @property.elastic_modulus %>
+</p>
+
+<p>
+  <strong>Shear modulus:</strong>
+  <%= @property.shear_modulus %>
+</p>
+
+<p>
+  <strong>Poissons strength:</strong>
+  <%= @property.poissons_strength %>
+</p>
+
+<p>
+  <strong>Yield strength:</strong>
+  <%= @property.yield_strength %>
+</p>
+
+<p>
+  <strong>Ultimate tensile strength:</strong>
+  <%= @property.ultimate_tensile_strength %>
+</p>
+
+<p>
+  <strong>Ultimate total elongation:</strong>
+  <%= @property.ultimate_total_elongation %>
+</p>
+
+<p>
+  <strong>Hardness value:</strong>
+  <%= @property.hardness_value %>
+</p>
+
+<p>
+  <strong>Melting point:</strong>
+  <%= @property.melting_point %>
+</p>
+
+<p>
+  <strong>Thermal conductivity:</strong>
+  <%= @property.thermal_conductivity %>
+</p>
+
+<p>
+  <strong>Specific heat:</strong>
+  <%= @property.specific_heat %>
+</p>
+
+<p>
+  <strong>Electrical resistivity:</strong>
+  <%= @property.electrical_resistivity %>
+</p>
+
+<p>
+  <strong>Chemical composition:</strong>
+  <%= @property.chemical_composition %>
+</p>
+
+<%= link_to 'Edit', edit_property_path(@property) %> |
+<%= link_to 'Back', properties_path %>

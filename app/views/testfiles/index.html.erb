@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Testfiles</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Filename</th>
+      <th>Content type</th>
+      <th>File contents</th>
+      <th>Confidence rank</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @testfiles.each do |testfile| %>
+      <tr>
+        <td><%= testfile.filename %></td>
+        <td><%= testfile.content_type %></td>
+        <td><%= testfile.file_contents %></td>
+        <td><%= testfile.confidence_rank %></td>
+        <td><%= link_to 'Show', testfile %></td>
+        <td><%= link_to 'Edit', edit_testfile_path(testfile) %></td>
+        <td><%= link_to 'Destroy', testfile, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Testfile', new_testfile_path %>

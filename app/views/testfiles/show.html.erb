@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Filename:</strong>
+  <%= @testfile.filename %>
+</p>
+
+<p>
+  <strong>Content type:</strong>
+  <%= @testfile.content_type %>
+</p>
+
+<p>
+  <strong>File contents:</strong>
+  <%= @testfile.file_contents %>
+</p>
+
+<p>
+  <strong>Confidence rank:</strong>
+  <%= @testfile.confidence_rank %>
+</p>
+
+<%= link_to 'Edit', edit_testfile_path(@testfile) %> |
+<%= link_to 'Back', testfiles_path %>
